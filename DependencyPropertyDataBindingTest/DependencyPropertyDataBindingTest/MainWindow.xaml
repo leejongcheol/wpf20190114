@@ -1,0 +1,18 @@
+﻿<Window x:Class="DependencyPropertyDataBindingTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DependencyPropertyDataBindingTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <TextBlock>의존 속성 테스트</TextBlock>
+        <TextBox Text="{Binding Path=Test,Mode=TwoWay,
+UpdateSourceTrigger=PropertyChanged}">
+            <TextBox.DataContext>
+                <local:DPTest/>
+            </TextBox.DataContext>
+        </TextBox>
+    </StackPanel>
+</Window>
