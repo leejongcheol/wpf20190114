@@ -1,8 +1,7 @@
 ﻿/*
  * Windows 응용 프로그램 멀티 쓰레딩에서 가장 어려운 개념은 다른 스레드에서 UI를
 변경할 수 없다는 것이다. 대신 UI스레드에서 메소드를 호출해야 원하는 변경이 이루
-어 진다.
- 백그라운드 워커(Background Worker)는 System.ComponentModel 아래의 클래스로
+어 진다.    백그라운드 워커(Background Worker)는 System.ComponentModel 아래의 클래스로
 코드를 별도의 쓰레드에서 동시에 비동기적으로 실행하게 해 주는데 응용프로그램의
 기본 쓰레드와 자동으로 동기화 해준다. 호출 쓰레드는 정상적으로 실행이 되고
 Background Worker는 백그라운드에서 비동기적으로 실행된다.
