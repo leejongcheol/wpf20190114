@@ -5,9 +5,7 @@
  xmlns:mc="http://schemas.openxmlformats.org/markupcompatibility/2006"
  xmlns:local="clr-namespace:BackgroundWorkerTest"
   Title="MainWindow" Height="350" Width="359.844">
-    
     <Grid>
-        </TextBlock>
         <Label Content="숫자를 입력하세요." HorizontalAlignment="Left"
 Margin="44,25,0,0" VerticalAlignment="Top" Width="121"/>
         <TextBox x:Name="txtNumber" HorizontalAlignment="Left" Height="23"
