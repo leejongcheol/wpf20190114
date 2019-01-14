@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
 using System.Xml;
-namespace WpfApplication2
+namespace LoadXaml
 {
     class LoadXaml : Window
     {
