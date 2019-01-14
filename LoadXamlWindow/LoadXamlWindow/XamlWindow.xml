@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ Title="Load Xaml Window And Button"
+ SizeToContent="WidthAndHeight"
+ ResizeMode="CanMinimize">
+  <StackPanel>
+    <Button HorizontalAlignment="Center"
+    Margin="40" Name="XamlButton">
+      Hello, WPF!
+    </Button>
+    <Ellipse Width="100"
+    Height="50"
+    Margin="24"
+    Stroke="Red" 
+    StrokeThickness="10" />
+    <ListBox Width="100"
+    Height="100"
+    Margin="24">
+      <ListBoxItem>귤</ListBoxItem>
+      <ListBoxItem>사과</ListBoxItem>
+      <ListBoxItem>배</ListBoxItem>
+      <ListBoxItem>바나나</ListBoxItem>
+      <ListBoxItem>수박</ListBoxItem>
+      <ListBoxItem>참외</ListBoxItem>
+    </ListBox>
+  </StackPanel>
+</Window>
