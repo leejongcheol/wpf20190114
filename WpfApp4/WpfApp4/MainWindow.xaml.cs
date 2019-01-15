@@ -20,14 +20,14 @@ namespace WpfApp4
             {
                 if (str.Length > 0)
                 {
-                    s = s.Substring(0, s.Length - 1);
+                    //s = s.Substring(0, s.Length - 1);
+                    s = s.Remove(s.Length - 1, 1);
                 }
             }
             else
             {
                 s += args.Text;
             }
-
             Content = s;
         }
     }
