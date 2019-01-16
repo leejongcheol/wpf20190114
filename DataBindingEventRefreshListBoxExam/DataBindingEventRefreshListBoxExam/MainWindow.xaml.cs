@@ -54,7 +54,7 @@ namespace DataBindingEventRefreshListBoxExam
         // 상단 ListBox의 값이 바뀜에 따라 OnSelected 이벤트
         //핸들러가 호출되어
       // 자동으로 아래쪽 ListBox의 값은 변경된다.
- myListBox1.SelectedItem = null;
+    myListBox1.SelectedItem = null;
     myListBox1.SelectedIndex = (dutyType == DutyType.Inner) ?
 0 : 1;
 
