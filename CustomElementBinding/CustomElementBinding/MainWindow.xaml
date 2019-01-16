@@ -1,0 +1,28 @@
+﻿<Window x:Class="CustomElementBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:src="clr-namespace:CustomElementBinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <ScrollBar Orientation="Horizontal"
+ Margin="24"
+ Maximum="100"
+ LargeChange="10"
+ SmallChange="1"
+ Value="{Binding ElementName=simple, Path=Number,
+ Mode=OneWayToSource}" />
+        
+        <src:MyElement x:Name="simple" HorizontalAlignment="Center" />
+        
+        <ScrollBar Name="scroll" Orientation="Horizontal" Margin="24" Maximum="100"
+ LargeChange="10" SmallChange="1" 
+                   Value="{Binding ElementName=simple, Path=Number,Mode=TwoWay}" />
+        
+        <src:MyElement HorizontalAlignment="Center"
+ Number="{Binding ElementName=scroll, Path=Value,
+ Mode=OneWay}" />
+    </StackPanel>
+</Window>
