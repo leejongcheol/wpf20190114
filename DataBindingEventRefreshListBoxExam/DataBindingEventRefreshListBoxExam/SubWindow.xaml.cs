@@ -23,10 +23,7 @@ namespace DataBindingEventRefreshListBoxExam
             }
             DutyType dutyType = (rdoInner.IsChecked == true) ?
             DutyType.Inner : DutyType.OutSide;
-            MainWindow.duties.Add(
-            new Duty(txtDutyName.Text,
-          
-            dutyType
+            MainWindow.duties.Add(new Duty(txtDutyName.Text,dutyType
            ));
             UpdateActor.DynamicInvoke(dutyType);
             MessageBox.Show("저장OK!", "저장확인");

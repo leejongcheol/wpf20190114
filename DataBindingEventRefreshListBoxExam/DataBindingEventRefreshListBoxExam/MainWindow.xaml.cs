@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
+using System.Windows.Controls;
+
 namespace DataBindingEventRefreshListBoxExam
 {
     public partial class MainWindow : Window
@@ -11,17 +12,15 @@ namespace DataBindingEventRefreshListBoxExam
             InitializeComponent();
         }
         // 상단 ListBox의 항목(직무타입)을 선택했을 때
-        private void OnSelected(object sender,
-       SelectionChangedEventArgs e)
+        private void OnSelected(object sender, SelectionChangedEventArgs e)
         {
             if ((sender as ListBox).SelectedItem != null)
             {
                 string dutyType = ((sender as ListBox).SelectedItem as
                ListBoxItem).Content.ToString();
                 DataContext = from duty in duties
-                              where duty.DutyType.ToString() ==
-           dutyType
-            select duty;
+                                where duty.DutyType.ToString() == dutyType
+                                select duty;
             }
         }
         //하단 ListBox의 항목(직무)를 선택했을 때
@@ -39,8 +38,8 @@ namespace DataBindingEventRefreshListBoxExam
         {
             SubWindow subWindow = new SubWindow();
             RefreshListEvent += new RefreshList(RefreshListBox); //event initialization
- subWindow.UpdateActor = RefreshListEvent; // assigning event to the Delegate
- subWindow.Show();
+            subWindow.UpdateActor = RefreshListEvent; // assigning event to the Delegate
+            subWindow.Show();
     }
     // 아래쪽 ListBox를 Refresh 하기위한 델리게이트 및 이벤트
     public delegate void RefreshList(DutyType dutyType);
@@ -55,8 +54,7 @@ namespace DataBindingEventRefreshListBoxExam
         //핸들러가 호출되어
       // 자동으로 아래쪽 ListBox의 값은 변경된다.
     myListBox1.SelectedItem = null;
-    myListBox1.SelectedIndex = (dutyType == DutyType.Inner) ?
-0 : 1;
+    myListBox1.SelectedIndex = (dutyType == DutyType.Inner) ? 0 : 1;
 
     }
 }

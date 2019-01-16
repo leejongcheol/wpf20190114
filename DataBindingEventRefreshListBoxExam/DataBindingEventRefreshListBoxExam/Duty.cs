@@ -48,4 +48,4 @@ namespace DataBindingEventRefreshListBoxExam
             Add(new Duty("PROPOTION", DutyType.OutSide));
         }
     }
-}
+}

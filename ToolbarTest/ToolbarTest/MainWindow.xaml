@@ -1,0 +1,23 @@
+﻿<Window x:Class="ToolbarTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolbarTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ToolBarTray HorizontalAlignment="Left" Height="74" Margin="10,10,0,0"
+                     VerticalAlignment="Top" Width="497">
+            <ToolBar HorizontalAlignment="Right" Height="27"
+                     Band="0" BandIndex="0">
+                <Button Content="In band 1" Height="22" VerticalAlignment="Top" Width="75"/>
+                <Button Content="Button" Height="22" VerticalAlignment="Top" Width="75"/>
+            </ToolBar>
+            <ToolBar HorizontalAlignment="Left" Height="27"
+                     Band="1" BandIndex="0">
+                <Button Content="In band 2" Height="22" VerticalAlignment="Top" Width="75"/>
+            </ToolBar>
+        </ToolBarTray>
+    </Grid>
+</Window>
