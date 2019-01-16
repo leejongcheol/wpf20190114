@@ -10,8 +10,9 @@
         <Style x:Key="MyStyle" TargetType="TextBlock">
             <Setter Property="Visibility" Value="Visible"/>
             <Style.Triggers>
-                <DataTrigger Binding ="{Binding ElementName=cb1,
-Path=IsChecked}" Value="True">
+                <DataTrigger 
+                    Binding ="{Binding ElementName=cb1,Path=IsChecked}" 
+                                   Value="True">
                     <Setter Property="Visibility" Value="Hidden"/>
                 </DataTrigger>
             </Style.Triggers>
@@ -23,3 +24,17 @@ Path=IsChecked}" Value="True">
                    FontSize="20" Style="{StaticResource MyStyle}"/>
     </StackPanel>
 </Window>
+    <!-- 
+    
+    DataTrigger 클래스는 이전의 프로퍼티 트리거의 Property를 바인딩(Binding)으로
+대신하는 것을 제외하고는 Trigger와 유사한데 바인딩은 다른 엘리먼트를 참조한다.
+ DataTrigger는 바인딩 되는 값이 특정 값을 가질 때 프로퍼티를 설정할 수 있게 해
+준다.
+ <DataTrigger> 요소로 표시하며 트리거는 의존속성이 아닌 속성에 사용된다.
+ Model View ViewModel (M-V-VM) 디자인 패턴을 사용하여 데이터 바인딩을 사용하
+는 경우 이상적이다.
+ CheckBox와 TextBlock 컨트롤을 만드는데 최초 화면을 로드할 때는 TextBlock이 화
+면에 나타나지만 Checkbox를 클릭하면 사라지는 예제이다. 물론 다시 Checkbox를
+클릭하면 보이게 된다.
+    
+    -->
