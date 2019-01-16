@@ -1,0 +1,21 @@
+﻿<Window x:Class="ResourceTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResourceTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" /><ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column= "0" Style="{StaticResource ConflictButton}"
+ Content="Static"/>
+        <!-- 최초 DynamicResource는 루트 레벨의 ConflictButton 스타일을
+사용하지만 Grid가 렌더링될 때 동적으로 Grid에 적용되는 ConflictButton 스타일을
+적용하여 Blue 버튼을 Red로 대체한다.-->
+        <Button Grid.Column="1" Style="{DynamicResource ConflictButton}"
+ Content="Dynamic" />
+    </Grid>
+</Window>
