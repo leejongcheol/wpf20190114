@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyTriggerTest2", "PropertyTriggerTest2\PropertyTriggerTest2.csproj", "{F603FD93-8C9D-421B-8D21-300A5FF26CEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F603FD93-8C9D-421B-8D21-300A5FF26CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F603FD93-8C9D-421B-8D21-300A5FF26CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F603FD93-8C9D-421B-8D21-300A5FF26CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F603FD93-8C9D-421B-8D21-300A5FF26CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AF89248-90D1-48EA-9265-5A7BE7E87039}
+	EndGlobalSection
+EndGlobal
